@@ -1,5 +1,6 @@
 <?php
-
+use App\Models\UserAddress;
+use App\policies\UserAddressPolicy;
 namespace App\Providers;
 
 use Illuminate\Support\Facades\Gate;
@@ -13,7 +14,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        'App\Model' => 'App\Policies\ModelPolicy',
+        UserAddress::class => UserAddressPolicy::class,
     ];
 
     /**
