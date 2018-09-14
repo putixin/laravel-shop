@@ -1,8 +1,11 @@
 <?php
-use App\Models\UserAddress;
-use App\policies\UserAddressPolicy;
+
 namespace App\Providers;
 
+use App\Models\UserAddress;
+use App\policies\UserAddressPolicy;
+use App\Models\Order;
+use App\Policies\OrderPolicy;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
