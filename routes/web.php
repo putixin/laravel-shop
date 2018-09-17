@@ -3,6 +3,7 @@
 Route::redirect('/', '/products')->name('root');
 Route::get('products', 'ProductsController@index')->name('products.index');
 
+
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function() {
