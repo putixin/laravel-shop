@@ -183,6 +183,9 @@
             });
             html += '</div>';
             swal({content: $(html)[0], icon: 'error'})
+          } else if (error.response.status === 403){ // 判断优惠券不存在
+            // 如果状态码是 403，说明有其他提交不满足
+            swal(error.response.data.msg, '', 'error');
           } else {
             // 其他情况应该是系统挂了
             swal('系统错误', '', 'error');
